@@ -1,0 +1,250 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+header.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+header .logo img {
+    width: 150px;
+}
+.nav-list ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+.nav-list a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+}
+.nav-list a:hover {
+    background-color: #D42F41;
+    color: white;
+}
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    padding-right: 300px;
+}
+.beranda .content {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.content-description {
+    flex: 1 1 600px;
+}
+.content-description .title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.content-description p {
+    text-align: justify;
+    margin-bottom: 1.5rem;
+}
+.content-description button {
+    padding: 0.7rem 2rem;
+    background-color: #F1D74D;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.info-samping {
+    position: fixed;
+    right: 2rem;
+    width: 250px;
+    background-color: #091b34;
+    color: #ff5f1f;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.info-samping p {
+  font-size: 1.0rem;
+  margin: 0.3rem 0;
+  color: #f0b27a;
+}
+
+.info-samping img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+.koleksi .image-container,
+.review .box-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 4.0rem;
+}
+.box {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    max-width: 100%;           /* ⬅️ Biar nggak terlalu besar */
+    font-size: 0.9rem; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.car-name {
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+.review .heading {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #2C84C7;
+    background-color: rgba(44, 132, 199, 0.1);
+    padding: 0.5rem 1.5rem;
+    border-radius: 12px;
+}
+.stars {
+    color: gold;
+    margin-bottom: 0.5rem;
+}
+.user {
+    margin-top: 1rem;
+}
+.user img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.user-info h3 {
+    margin: 0.5rem 0 0.2rem;
+}
+.footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #eee;
+    margin-top: 3rem;
+}
+@media (max-width: 768px) {
+main {
+    padding-right: 1rem;
+}
+
+.info-samping {
+    display: none; 
+
+}
+
+.koleksi .image-container,
+.review .box-container {
+    display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 4rem;
+}
+}
+
+.button_koleksi{
+    margin-bottom: 50px;
+}
+
+.button_koleksi:hover {
+    background-color: #D8BF3F;
+}
+
+.info-samping button {
+    margin-top: 10px;
+    background-color: #ff5f1f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.info-samping button:hover {
+ background-color: #e4002b;
+  color: #fff;
+}
+
+.event-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  gap: 1rem;
+  color: #A32432;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.event-heading::before,
+.event-heading::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background-color: #2C84C7;
+  opacity: 0.3;
+}
+
+.event-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 1.0rem;
+}
+
+.event-box:hover {
+  transform: translateY(-5px);
+}
+
+.event-box img {
+  width: 150px;
+  object-fit: cover;
+}
+
+.event-box .event-info {
+  padding: 1rem;
+   display: flex;
+  flex-direction: column; /* Biar h3 dan p jadi dua baris */
+  justify-content: center; /* Tengah secara vertikal */
+}
